@@ -171,7 +171,7 @@ impl Lexer {
                 self.string_buffer.push(c);
                 Ok(LexerState::Number { decimal: false })
             },
-            ' ' | '\t' | '\n' => {
+            ' ' | '\t' | '\n' | '\r' => {
                 // whitespace
                 Ok(LexerState::NoState)
             },
